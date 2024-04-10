@@ -241,8 +241,10 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/IMG_20210213_114412.jpg") top center;
-  background-size: cover;
+  background: url("../img/full-stack-web-developer.jpg") top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #hero:before {
@@ -260,6 +262,7 @@ h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #hero h1 {
@@ -267,18 +270,18 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: skyblue;
 }
 
 #hero p {
-  color: #fff;
+  color: skyblue;
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #fff;
+  color: rgb(220, 33, 33);
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
