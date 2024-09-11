@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>My Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/images.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/javascript.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="../assets/img/imresizer-1695233590816.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Rahul Balbatti</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="https://www.linkedin.com/in/rahul8366" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="../index.html" class="nav-link scrollto "><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
+          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="blogDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="bx bx-book"></i> <span>Blog</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="blogDropdown">
+              <!-- <a class="dropdown-item" href="#java">Java</a> -->
+              <a class="dropdown-item" href="./html.html">HTML</a>
+              <a class="dropdown-item active" href="./css.html">CSS</a>
+              <a class="dropdown-item " href="./javascript.html">JavaScript</a>
+            </div>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header>
+
+
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Rahul Balbatti</h1>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= card Section ======= -->
+    <div class="header bg-primary text-white text-center py-3">
+      <h1>CSS Fundamentals Blog</h1>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar mb-4">
+      <div class="input-group">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search blog posts...">
+        <div class="input-group-append">
+          <button class="btn btn-primary" onclick="searchPosts()">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards Section-->
+      <!-- Card 1: Selectors -->
+    <div class="card">
+        <div class="card-header">
+            <span>Selectors</span>
+            <button class="btn-info" onclick="copyCode('codeSelectors')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Selectors allow you to target HTML elements in different ways.</p>
+            <pre id="codeSelectors"><code>/* Element selector */
+p {
+    color: blue;
+}
+
+/* Class selector */
+.container {
+    padding: 20px;
+}
+
+/* ID selector */
+#header {
+    background-color: lightgray;
+}
+
+/* Attribute selector */
+input[type="text"] {
+    border: 1px solid black;
+}
+
+/* Pseudo-class selector */
+a:hover {
+    color: red;
+}
+
+/* Pseudo-element selector */
+p::first-line {
+    font-weight: bold;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 2: Box Model -->
+    <div class="card">
+        <div class="card-header">
+            <span>Box Model</span>
+            <button class="btn-info" onclick="copyCode('codeBoxModel')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>The Box Model describes the rectangular boxes generated for elements in the document tree.</p>
+            <pre id="codeBoxModel"><code>.box {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 3: Typography -->
+    <div class="card">
+        <div class="card-header">
+            <span>Typography</span>
+            <button class="btn-info" onclick="copyCode('codeTypography')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Typography refers to the style and appearance of text.</p>
+            <pre id="codeTypography"><code>h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 4: Color -->
+    <div class="card">
+        <div class="card-header">
+            <span>Color</span>
+            <button class="btn-info" onclick="copyCode('codeColor')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Color can be specified using names, hex values, RGB, RGBA, HSL, and HSLA.</p>
+            <pre id="codeColor"><code>.text-color {
+    color: #ff0000; /* Hex */
+    background-color: rgb(0, 255, 0); /* RGB */
+}
+
+.absolute-units {
+    width: 100px;
+    height: 2in;
+}
+
+.relative-units {
+    font-size: 2em;
+    margin: 10%;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 5: Positioning -->
+    <div class="card">
+        <div class="card-header">
+            <span>Positioning</span>
+            <button class="btn-info" onclick="copyCode('codePositioning')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Positioning allows you to control the layout of elements on the page.</p>
+            <pre id="codePositioning"><code>.relative {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.absolute {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 6: Display -->
+    <div class="card">
+        <div class="card-header">
+            <span>Display</span>
+            <button class="btn-info" onclick="copyCode('codeDisplay')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Display properties control the rendering of elements.</p>
+            <pre id="codeDisplay"><code>.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 7: Flexbox -->
+    <div class="card">
+        <div class="card-header">
+            <span>Flexbox</span>
+            <button class="btn-info" onclick="copyCode('codeFlexbox')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Flexbox is a layout model for distributing space along a single axis.</p>
+            <pre id="codeFlexbox"><code>.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item {
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    align-self: flex-start;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 8: Grid Layout -->
+    <div class="card">
+        <div class="card-header">
+            <span>Grid Layout</span>
+            <button class="btn-info" onclick="copyCode('codeGridLayout')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Grid layout allows you to create complex layouts with rows and columns.</p>
+            <pre id="codeGridLayout"><code>.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content";
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 9: Transitions and Animations -->
+    <div class="card">
+        <div class="card-header">
+            <span>Transitions and Animations</span>
+            <button class="btn-info" onclick="copyCode('codeTransitions')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Transitions and animations add dynamic effects to elements.</p>
+            <pre id="codeTransitions"><code>.box {
+    transition: background-color 0.5s ease;
+}
+
+.box:hover {
+    background-color: blue;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.animated-box {
+    animation: slidein 3s ease-in-out infinite;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 10: Transforms -->
+    <div class="card">
+        <div class="card-header">
+            <span>Transforms</span>
+            <button class="btn-info" onclick="copyCode('codeTransforms')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Transforms allow you to change the appearance of an element by applying 2D or 3D transformations.</p>
+            <pre id="codeTransforms"><code>.transform-box {
+    transform: translate(50px, 100px) rotate(45deg) scale(1.5) skew(10deg, 20deg);
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 11: Responsive Design -->
+    <div class="card">
+        <div class="card-header">
+            <span>Responsive Design</span>
+            <button class="btn-info" onclick="copyCode('codeResponsive')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Responsive design ensures that your website looks good on all devices.</p>
+            <pre id="codeResponsive"><code>@media (max-width: 600px) {
+    .responsive {
+        background-color: lightblue;
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 12: CSS Variables -->
+    <div class="card">
+        <div class="card-header">
+            <span>CSS Variables</span>
+            <button class="btn-info" onclick="copyCode('codeCSSVariables')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>CSS Variables (Custom Properties) allow you to reuse values throughout your CSS.</p>
+            <pre id="codeCSSVariables"><code>:root {
+    --main-bg-color: coral;
+    --main-font-size: 16px;
+}
+
+.variable-box {
+    background-color: var(--main-bg-color);
+    font-size: var(--main-font-size);
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 13: Pseudo-classes and Pseudo-elements -->
+    <div class="card">
+        <div class="card-header">
+            <span>Pseudo-classes and Pseudo-elements</span>
+            <button class="btn-info" onclick="copyCode('codePseudoClasses')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Pseudo-classes and pseudo-elements allow you to style parts of elements or apply styles based on user interaction.</p>
+            <pre id="codePseudoClasses"><code>a:visited {
+    color: purple;
+}
+
+.first-letter::first-letter {
+    font-size: 200%;
+    color: red;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 14: CSS Preprocessors -->
+    <div class="card">
+        <div class="card-header">
+            <span>CSS Preprocessors</span>
+            <button class="btn-info" onclick="copyCode('codePreprocessors')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>CSS preprocessors extend CSS with variables, nested rules, and more.</p>
+            <pre id="codePreprocessors"><code>$primary-color: blue;
+
+.preprocessor {
+    color: $primary-color;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 15: Best Practices -->
+    <div class="card">
+        <div class="card-header">
+            <span>Best Practices</span>
+            <button class="btn-info" onclick="copyCode('codeBestPractices')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>Best practices help you organize and optimize your CSS.</p>
+            <pre id="codeBestPractices"><code>/* BEM Methodology */
+.block {
+    &__element {
+        &--modifier {
+            background-color: yellow;
+        }
+    }
+}
+
+/* Link to a minified CSS file */
+<link rel="stylesheet" href="styles.min.css">
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 16: CSS Frameworks -->
+    <div class="card">
+        <div class="card-header">
+            <span>CSS Frameworks</span>
+            <button class="btn-info" onclick="copyCode('codeFrameworks')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>CSS frameworks provide pre-written styles and components to speed up development.</p>
+            <pre id="codeFrameworks"><code><!-- Bootstrap Example -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            Column 1
+        </div>
+        <div class="col">
+            Column 2
+        </div>
+    </div>
+</div>
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 17: CSS-in-JS Libraries -->
+    <div class="card">
+        <div class="card-header">
+            <span>CSS-in-JS Libraries</span>
+            <button class="btn-info" onclick="copyCode('codeCSSinJS')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p>CSS-in-JS libraries allow you to write CSS styles in JavaScript.</p>
+            <pre id="codeCSSinJS"><code>/* Styled-components example in React */
+import styled from 'styled-components';
+
+const Button = styled.button`
+    background: palevioletred;
+    color: white;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+`;
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 1: CSS Basics -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>CSS Basics</span>
+            <button class="btn btn-info btn-sm" onclick="copyAllCode()">Copy All Code</button>
+        </div>
+        <div class="card-body">
+            <h2>Selectors</h2>
+            <p>• <strong>Element</strong></p>
+            <p>• <strong>Class</strong></p>
+            <p>• <strong>ID</strong></p>
+            <p>• <strong>Attribute</strong></p>
+            <p>• <strong>Pseudo-classes and pseudo-elements</strong></p>
+            <pre id="codeSelectors"><code>/* Element selector */
+p {
+    color: blue;
+}
+
+/* Class selector */
+.container {
+    padding: 20px;
+}
+
+/* ID selector */
+#header {
+    background-color: lightgray;
+}
+
+/* Attribute selector */
+input[type="text"] {
+    border: 1px solid black;
+}
+
+/* Pseudo-class selector */
+a:hover {
+    color: red;
+}
+
+/* Pseudo-element selector */
+p::first-line {
+    font-weight: bold;
+}
+            </code></pre>
+
+            <h2>Box Model</h2>
+            <p>• Content</p>
+            <p>• Padding</p>
+            <p>• Border</p>
+            <p>• Margin</p>
+            
+            <h2>Typography</h2>
+            <p>• Font families</p>
+            <p>• Font sizes</p>
+            <p>• Font weight</p>
+            <p>• Line height</p>
+            <p>• Text alignment</p>
+            <p>• Text decoration</p>
+            <p>• Text transform</p>
+            <pre id="codeTypography"><code>.box {
+    width: 200px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+            </code></pre>
+
+            <h2>Color</h2>
+            <p>• Color names</p>
+            <p>• Hex, RGB, RGBA, HSL, HSLA</p>
+            <p>• Background color</p>
+            <pre id="codeColor"><code>.text-color {
+    color: #ff0000; /* Hex */
+    background-color: rgb(0, 255, 0); /* RGB */
+}
+
+.absolute-units {
+    width: 100px;
+    height: 2in;
+}
+
+.relative-units {
+    font-size: 2em;
+    margin: 10%;
+}
+            </code></pre>
+
+            <h2>Layout</h2>
+            <h3>Positioning</h3>
+            <p>• Static</p>
+            <p>• Relative</p>
+            <p>• Absolute</p>
+            <p>• Fixed</p>
+            <p>• Sticky</p>
+            <pre id="codePositioning"><code>.relative {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.absolute {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+            </code></pre>
+
+            <h3>Display</h3>
+            <p>• Block</p>
+            <p>• Inline</p>
+            <p>• Inline-block</p>
+            <p>• None</p>
+            <p>• Flex</p>
+            <p>• Grid</p>
+            <pre id="codeDisplay"><code>.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+            </code></pre>
+
+            <h3>Flexbox</h3>
+            <p>• Container properties: display, flex-direction, flex-wrap, justify-content, align-items, align-content</p>
+            <p>• Item properties: order, flex-grow, flex-shrink, flex-basis, align-self</p>
+            <pre id="codeFlexbox"><code>.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item {
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    align-self: flex-start;
+}
+            </code></pre>
+
+            <h3>Grid Layout</h3>
+            <p>• Grid container: display, grid-template-columns, grid-template-rows, grid-template-areas, grid-gap</p>
+            <p>• Grid items: grid-column, grid-row, grid-area</p>
+            <pre id="codeGridLayout"><code>.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content";
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 2: Advanced CSS Concepts -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Advanced CSS Concepts</span>
+        </div>
+        <div class="card-body">
+            <h2>Transitions and Animations</h2>
+            <p>• Transition properties: transition-property, transition-duration, transition-timing-function, transition-delay</p>
+            <p>• Keyframes: @keyframes, animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction</p>
+            <pre id="codeTransitions"><code>.box {
+    transition: background-color 0.5s ease;
+}
+
+.box:hover {
+    background-color: blue;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.animated-box {
+    animation: slidein 3s ease-in-out infinite;
+}
+            </code></pre>
+
+            <h2>Transforms</h2>
+            <p>• Translate</p>
+            <p>• Rotate</p>
+            <p>• Scale</p>
+            <p>• Skew</p>
+            <pre id="codeTransforms"><code>.transform-box {
+    transform: translate(50px, 100px) rotate(45deg) scale(1.5) skew(10deg, 20deg);
+}
+            </code></pre>
+
+            <h2>Responsive Design</h2>
+            <p>• Media queries</p>
+            <p>• Responsive units</p>
+            <p>• Mobile-first design</p>
+            <p>• Viewport meta tag</p>
+            <pre id="codeResponsive"><code>@media (max-width: 600px) {
+    .responsive {
+        background-color: lightblue;
+    }
+}
+            </code></pre>
+
+            <h2>CSS Variables (Custom Properties)</h2>
+            <p>• Defining variables: --variable-name</p>
+            <p>• Using variables: var(--variable-name)</p>
+            <pre id="codeCSSVariables"><code>:root {
+    --main-bg-color: coral;
+    --main-font-size: 16px;
+}
+
+.variable-box {
+    background-color: var(--main-bg-color);
+    font-size: var(--main-font-size);
+}
+            </code></pre>
+
+            <h2>Pseudo-classes and Pseudo-elements</h2>
+            <p>• Pseudo-classes: :hover, :focus, :active, :nth-child(), :nth-of-type(), etc.</p>
+            <p>• Pseudo-elements: ::before, ::after, ::first-letter, ::first-line</p>
+            <pre id="codePseudoClasses"><code>a:visited {
+    color: purple;
+}
+
+.first-letter::first-letter {
+    font-size: 200%;
+    color: red;
+}
+            </code></pre>
+
+            <h2>CSS Preprocessors</h2>
+            <p>• SASS/SCSS</p>
+            <p>• LESS</p>
+            <p>• Stylus</p>
+            <pre id="codePreprocessors"><code>$primary-color: blue;
+
+.preprocessor {
+    color: $primary-color;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 3: Best Practices and Tools -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Best Practices and Tools</span>
+        </div>
+        <div class="card-body">
+            <h2>Organizing CSS</h2>
+            <p>• Modular CSS</p>
+            <p>• BEM (Block Element Modifier) methodology</p>
+            <p>• SMACSS (Scalable and Modular Architecture for CSS)</p>
+            <pre id="codeOrganizingCSS"><code>/* BEM Methodology */
+.block {
+    &__element {
+        &--modifier {
+            background-color: yellow;
+        }
+    }
+}
+            </code></pre>
+
+            <h2>Performance Optimization</h2>
+            <p>• Minification</p>
+            <p>• Combining CSS files</p>
+            <p>• Critical CSS</p>
+            <p>• Non-blocking CSS loading (async, defer)</p>
+            <pre id="codePerformance"><code><!-- Link to a minified CSS file -->
+<link rel="stylesheet" href="styles.min.css">
+            </code></pre>
+
+            <h2>CSS Frameworks</h2>
+            <p>• Bootstrap</p>
+            <p>• Foundation</p>
+            <p>• Bulma</p>
+            <p>• Tailwind CSS</p>
+            <pre id="codeFrameworks"><code><!-- Bootstrap Example -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            Column 1
+        </div>
+        <div class="col">
+            Column 2
+        </div>
+    </div>
+</div>
+            </code></pre>
+
+            <h2>CSS-in-JS Libraries</h2>
+            <p>• Styled-components</p>
+            <p>• Emotion</p>
+            <p>• JSS</p>
+            <pre id="codeCSSinJS"><code>/* Styled-components example in React */
+import styled from 'styled-components';
+
+const Button = styled.button`
+    background: palevioletred;
+    color: white;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+`;
+            </code></pre>
+
+            <h2>Learning Resources</h2>
+            <p>• Documentation: MDN Web Docs, W3Schools</p>
+            <p>• Courses: FreeCodeCamp, Codecademy, Udacity, Coursera</p>
+            <p>• Books: "CSS: The Definitive Guide" by Eric A. Meyer, "CSS Secrets" by Lea Verou</p>
+            <p>• Practice: CodePen, CSS-Tricks, Frontend Mentor</p>
+        </div>
+    </div>
+
+
+
+    <!-- Add more cards as needed -->
+
+    <!-- End cards Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <!-- <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div> -->
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="#">Rahul</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/copycode.js"></script>
+
+</body>
+
+</html>

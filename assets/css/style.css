@@ -172,7 +172,7 @@ h6 {
 
 .dropdown-item:hover {
   background-color: #2c2f3f; /* Highlight color on hover */
-  color: #fff; /* Text color on hover */
+  color: #101010; /* Text color on hover */
 }
 
 /* Ensure dropdown toggle is styled properly */

@@ -27,9 +27,7 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/javascript.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <!-- =======================================================
   * Template Name: iPortfolio
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -56,27 +54,27 @@
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="https://www.linkedin.com/in/rahul3232" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/rahul8366" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
   
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="../index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="../index.html" class="nav-link scrollto "><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
           <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="bx bx-book"></i> <span>Blog</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="blogDropdown">
               <!-- <a class="dropdown-item" href="#java">Java</a> -->
-              <a class="dropdown-item" href="../Blog/html.html">HTML</a>
-              <a class="dropdown-item" href="../Blog/css.html">CSS</a>
-              <a class="dropdown-item" href="./Blog/javascript.html">JavaScript</a>
+              <a class="dropdown-item" href="./html.html">HTML</a>
+              <a class="dropdown-item" href="./css.html">CSS</a>
+              <a class="dropdown-item active" href="./javascript.html">JavaScript</a>
             </div>
           </li>
         </ul>
@@ -95,11 +93,12 @@
     </div>
   </section><!-- End Hero -->
 
-<div class="header bg-primary text-white text-center py-3">
-    <h1>JavaScript Fundamentals Blog</h1>
-</div>
+  <main id="main">
 
-    <main class="container-fluid ">
+    <!-- ======= card Section ======= -->
+    <div class="header bg-primary text-white text-center py-3">
+        <h1>JavaScript Fundamentals Blog</h1>
+    </div>
 
         <!-- Search Bar -->
         <div class="search-bar mb-4">
@@ -2307,22 +2306,49 @@ export class DataService {
             </div>
         </div>
 
-
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>JavaScript Hoisting</span>
+                <button class="btn btn-info btn-sm" onclick="copyAllCodes()">Copy All Code</button>
+            </div>
+            <div class="card-body">
+                <h2>Explanation</h2>
+                <p><strong>1. Definition:</strong> Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope (to the top of the current script or the current function). This means that variables and function declarations are processed before any code is executed.</p>
+                <p><strong>2. Behavior:</strong> Variable and function declarations are hoisted to the top, but variable initializations are not. This can lead to unexpected behavior if not properly understood.</p>
+                
+                <h2>Examples</h2>
+                
+                <h3>Variable Hoisting</h3>
+                <p>In JavaScript, variable declarations are hoisted to the top of their scope, but initializations are not. This means that you can reference variables before they are declared, but they will be <code>undefined</code> until the line where they are initialized.</p>
+                <pre id="codeVariableHoisting"><code>console.log(hoistedVar); // Output: undefined
+    var hoistedVar = 'I am hoisted';
+    console.log(hoistedVar); // Output: I am hoisted
+                </code></pre>
+                
+                <h3>Function Hoisting</h3>
+                <p>Function declarations are also hoisted, which means you can call a function before you declare it.</p>
+                <pre id="codeFunctionHoisting"><code>hoistedFunction(); // Output: I am a hoisted function
+    function hoistedFunction() {
+        console.log('I am a hoisted function');
+    }
+                </code></pre>
+                
+                <h3>Let and Const Hoisting</h3>
+                <p>Variables declared with <code>let</code> and <code>const  </code> are also hoisted but are not initialized. They remain in a "temporal dead zone" until the line of code where they are initialized is executed. Accessing them before initialization will result in a ReferenceError.</p>
+                <pre id="codeLetConstHoisting"><code>console.log(hoistedLet); // ReferenceError: Cannot access 'hoistedLet' before initialization
+    let hoistedLet = 'I am not hoisted properly';
+    console.log(hoistedLet); // Output: I am not hoisted properly
+                </code></pre>
+            </div>
+        </div>
         <!-- Add more cards as needed -->
 
-    </main>
+    <!-- End card Section -->
 
-    <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Clipboard JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-   <footer id="footer">
+  <footer id="footer">
     <div class="container">
       <!-- <div class="copyright">
         &copy; Copyright <strong><span>iPortfolio</span></strong>
@@ -2340,22 +2366,23 @@ export class DataService {
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/copycode.js"></script>
 
 </body>
 

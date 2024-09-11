@@ -1,4 +1,35 @@
-
+/*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #149ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  .back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+  }
+  
+  .back-to-top:hover {
+    background: #2eafec;
+    color: #fff;
+  }
+  
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+  }
 
 
 /*--------------------------------------------------------------
@@ -15,31 +46,19 @@
     z-index: 1000; /* Ensure it's above other content */
 }
 
-/*--------------------------------------------------------------
-# Container
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# General Styles
---------------------------------------------------------------*/
 body {
     background-color: #f0f2f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #272829;
 }
 
-/* Container */
-.container-fluid {
-    max-width: 1200px; /* Increased max-width for better alignment */
+.container {
+    max-width: 900px;
     margin: 20px auto;
     padding: 0 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
 }
 
-/* Search Bar */
 .search-bar {
     position: sticky;
     top: 80px; /* Adjust based on header height */
@@ -55,16 +74,35 @@ body {
     overflow: hidden;
 }
 
-/* Card Styles */
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
 .card {
-    background-color: #ffffff;
+    background-color: #32bdcf;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Ensure full width within container */
-    max-width: 600px; /* Control card width */
 }
 
 .card:hover {
@@ -121,7 +159,6 @@ body {
     background-color: #139296;
     transform: scale(1.05);
 }
-
 .highlight {
     background-color: yellow;
     color: black;
@@ -132,89 +169,4 @@ body {
 
 .highlight:hover {
     background-color: #ffeb3b;
-}
-
-/*--------------------------------------------------------------
-# Responsive Design
---------------------------------------------------------------*/
-
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-    .container-fluid {
-        padding: 0 10px;
-    }
-
-    .search-bar {
-        max-width: 100%;
-        top: 70px; /* Adjust based on header height on mobile */
-    }
-
-    .card {
-        width: 100%; /* Full width on small screens */
-        max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    }
-
-    .card-header {
-        font-size: 1.1rem;
-        padding: 10px;
-    }
-
-    .card-body {
-        padding: 15px;
-    }
-
-    .search-button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .search-input {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-
-    .btn-copy {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-    }
-}
-
-/* Laptop and desktop adjustments */
-@media (min-width: 769px) {
-    .container-fluid {
-        padding: 0 20px;
-    }
-
-    .search-bar {
-        max-width: 700px;
-    }
-
-    .card {
-        margin: 20px auto;
-        max-width: 600px; /* Ensuring consistent card width */
-    }
-
-    .card-header {
-        font-size: 1.25rem;
-        padding: 15px;
-    }
-
-    .card-body {
-        padding: 20px;
-    }
-
-    .search-button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .search-input {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .btn-copy {
-        font-size: 0.875rem;
-        padding: 5px 10px;
-    }
 }
