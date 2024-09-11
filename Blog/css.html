@@ -114,14 +114,16 @@
     </div>
 
     <!-- Cards Section-->
-      <!-- Card 1: Selectors -->
-    <div class="card">
-        <div class="card-header">
+     <!-- Card 1: Selectors -->
+     <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Selectors</span>
-            <button class="btn-info" onclick="copyCode('codeSelectors')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeSelectors')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Selectors allow you to target HTML elements in different ways.</p>
+            <p class="card-text">
+                Selectors allow you to target HTML elements in different ways.
+            </p>
             <pre id="codeSelectors"><code>/* Element selector */
 p {
     color: blue;
@@ -156,13 +158,15 @@ p::first-line {
     </div>
 
     <!-- Card 2: Box Model -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Box Model</span>
-            <button class="btn-info" onclick="copyCode('codeBoxModel')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeBoxModel')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>The Box Model describes the rectangular boxes generated for elements in the document tree.</p>
+            <p class="card-text">
+                The Box Model describes the rectangular boxes generated for elements in the document tree.
+            </p>
             <pre id="codeBoxModel"><code>.box {
     width: 200px;
     padding: 10px;
@@ -174,13 +178,15 @@ p::first-line {
     </div>
 
     <!-- Card 3: Typography -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Typography</span>
-            <button class="btn-info" onclick="copyCode('codeTypography')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeTypography')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Typography refers to the style and appearance of text.</p>
+            <p class="card-text">
+                Typography refers to the style and appearance of text.
+            </p>
             <pre id="codeTypography"><code>h1 {
     font-family: Arial, sans-serif;
     font-size: 24px;
@@ -195,13 +201,15 @@ p::first-line {
     </div>
 
     <!-- Card 4: Color -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Color</span>
-            <button class="btn-info" onclick="copyCode('codeColor')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeColor')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Color can be specified using names, hex values, RGB, RGBA, HSL, and HSLA.</p>
+            <p class="card-text">
+                Color can be specified using names, hex values, RGB, RGBA, HSL, and HSLA.
+            </p>
             <pre id="codeColor"><code>.text-color {
     color: #ff0000; /* Hex */
     background-color: rgb(0, 255, 0); /* RGB */
@@ -221,13 +229,15 @@ p::first-line {
     </div>
 
     <!-- Card 5: Positioning -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Positioning</span>
-            <button class="btn-info" onclick="copyCode('codePositioning')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codePositioning')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Positioning allows you to control the layout of elements on the page.</p>
+            <p class="card-text">
+                Positioning allows you to control the layout of elements on the page.
+            </p>
             <pre id="codePositioning"><code>.relative {
     position: relative;
     top: 10px;
@@ -255,13 +265,15 @@ p::first-line {
     </div>
 
     <!-- Card 6: Display -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Display</span>
-            <button class="btn-info" onclick="copyCode('codeDisplay')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeDisplay')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Display properties control the rendering of elements.</p>
+            <p class="card-text">
+                Display properties control the rendering of elements.
+            </p>
             <pre id="codeDisplay"><code>.block {
     display: block;
 }
@@ -286,13 +298,15 @@ p::first-line {
     </div>
 
     <!-- Card 7: Flexbox -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Flexbox</span>
-            <button class="btn-info" onclick="copyCode('codeFlexbox')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeFlexbox')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Flexbox is a layout model for distributing space along a single axis.</p>
+            <p class="card-text">
+                Flexbox is a layout model for distributing space along a single axis.
+            </p>
             <pre id="codeFlexbox"><code>.flex-container {
     display: flex;
     flex-direction: row;
@@ -313,13 +327,15 @@ p::first-line {
     </div>
 
     <!-- Card 8: Grid Layout -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Grid Layout</span>
-            <button class="btn-info" onclick="copyCode('codeGridLayout')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeGridLayout')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Grid layout allows you to create complex layouts with rows and columns.</p>
+            <p class="card-text">
+                Grid layout allows you to create complex layouts with rows and columns.
+            </p>
             <pre id="codeGridLayout"><code>.grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -346,13 +362,15 @@ p::first-line {
     </div>
 
     <!-- Card 9: Transitions and Animations -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Transitions and Animations</span>
-            <button class="btn-info" onclick="copyCode('codeTransitions')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeTransitions')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Transitions and animations add dynamic effects to elements.</p>
+            <p class="card-text">
+                Transitions and animations add dynamic effects to elements.
+            </p>
             <pre id="codeTransitions"><code>.box {
     transition: background-color 0.5s ease;
 }
@@ -378,13 +396,15 @@ p::first-line {
     </div>
 
     <!-- Card 10: Transforms -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Transforms</span>
-            <button class="btn-info" onclick="copyCode('codeTransforms')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeTransforms')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Transforms allow you to change the appearance of an element by applying 2D or 3D transformations.</p>
+            <p class="card-text">
+                Transforms allow you to change the appearance of an element using translation, rotation, scaling, and skewing.
+            </p>
             <pre id="codeTransforms"><code>.transform-box {
     transform: translate(50px, 100px) rotate(45deg) scale(1.5) skew(10deg, 20deg);
 }
@@ -393,14 +413,16 @@ p::first-line {
     </div>
 
     <!-- Card 11: Responsive Design -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Responsive Design</span>
-            <button class="btn-info" onclick="copyCode('codeResponsive')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeResponsiveDesign')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Responsive design ensures that your website looks good on all devices.</p>
-            <pre id="codeResponsive"><code>@media (max-width: 600px) {
+            <p class="card-text">
+                Responsive design ensures that your website adapts to various screen sizes.
+            </p>
+            <pre id="codeResponsiveDesign"><code>@media (max-width: 600px) {
     .responsive {
         background-color: lightblue;
     }
@@ -410,13 +432,15 @@ p::first-line {
     </div>
 
     <!-- Card 12: CSS Variables -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>CSS Variables</span>
-            <button class="btn-info" onclick="copyCode('codeCSSVariables')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeCSSVariables')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>CSS Variables (Custom Properties) allow you to reuse values throughout your CSS.</p>
+            <p class="card-text">
+                CSS Variables allow you to define reusable values in CSS.
+            </p>
             <pre id="codeCSSVariables"><code>:root {
     --main-bg-color: coral;
     --main-font-size: 16px;
@@ -431,13 +455,15 @@ p::first-line {
     </div>
 
     <!-- Card 13: Pseudo-classes and Pseudo-elements -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Pseudo-classes and Pseudo-elements</span>
-            <button class="btn-info" onclick="copyCode('codePseudoClasses')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codePseudoClasses')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Pseudo-classes and pseudo-elements allow you to style parts of elements or apply styles based on user interaction.</p>
+            <p class="card-text">
+                Pseudo-classes and pseudo-elements help you apply styles based on the state of elements or specific parts of an element.
+            </p>
             <pre id="codePseudoClasses"><code>a:visited {
     color: purple;
 }
@@ -451,13 +477,15 @@ p::first-line {
     </div>
 
     <!-- Card 14: CSS Preprocessors -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>CSS Preprocessors</span>
-            <button class="btn-info" onclick="copyCode('codePreprocessors')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codePreprocessors')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>CSS preprocessors extend CSS with variables, nested rules, and more.</p>
+            <p class="card-text">
+                CSS preprocessors add features to CSS such as variables and nested rules.
+            </p>
             <pre id="codePreprocessors"><code>$primary-color: blue;
 
 .preprocessor {
@@ -468,13 +496,15 @@ p::first-line {
     </div>
 
     <!-- Card 15: Best Practices -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>Best Practices</span>
-            <button class="btn-info" onclick="copyCode('codeBestPractices')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeBestPractices')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>Best practices help you organize and optimize your CSS.</p>
+            <p class="card-text">
+                Best practices for organizing and optimizing CSS.
+            </p>
             <pre id="codeBestPractices"><code>/* BEM Methodology */
 .block {
     &__element {
@@ -491,14 +521,16 @@ p::first-line {
     </div>
 
     <!-- Card 16: CSS Frameworks -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>CSS Frameworks</span>
-            <button class="btn-info" onclick="copyCode('codeFrameworks')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeCSSFrameworks')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>CSS frameworks provide pre-written styles and components to speed up development.</p>
-            <pre id="codeFrameworks"><code><!-- Bootstrap Example -->
+            <p class="card-text">
+                CSS frameworks provide pre-written styles and components to speed up development.
+            </p>
+            <pre id="codeCSSFrameworks"><code><!-- Bootstrap Example -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
 <div class="container">
@@ -516,13 +548,15 @@ p::first-line {
     </div>
 
     <!-- Card 17: CSS-in-JS Libraries -->
-    <div class="card">
-        <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <span>CSS-in-JS Libraries</span>
-            <button class="btn-info" onclick="copyCode('codeCSSinJS')">Copy Code</button>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeCSSinJS')">Copy Code</button>
         </div>
         <div class="card-body">
-            <p>CSS-in-JS libraries allow you to write CSS styles in JavaScript.</p>
+            <p class="card-text">
+                CSS-in-JS libraries let you write CSS styles in JavaScript.
+            </p>
             <pre id="codeCSSinJS"><code>/* Styled-components example in React */
 import styled from 'styled-components';
 
