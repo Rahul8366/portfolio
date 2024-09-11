@@ -1,0 +1,220 @@
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/*--------------------------------------------------------------
+# Container
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# General Styles
+--------------------------------------------------------------*/
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #272829;
+}
+
+/* Container */
+.container-fluid {
+    max-width: 1200px; /* Increased max-width for better alignment */
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+/* Search Bar */
+.search-bar {
+    position: sticky;
+    top: 80px; /* Adjust based on header height */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%; /* Ensure full width within container */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure full width within container */
+    max-width: 600px; /* Control card width */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.card-header:hover {
+    background-color: #0056b3;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body pre {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-body code {
+    display: block;
+}
+
+.btn-copy {
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-copy:hover {
+    background-color: #139296;
+    transform: scale(1.05);
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+    padding: 0 4px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.highlight:hover {
+    background-color: #ffeb3b;
+}
+
+/*--------------------------------------------------------------
+# Responsive Design
+--------------------------------------------------------------*/
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 10px;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        top: 70px; /* Adjust based on header height on mobile */
+    }
+
+    .card {
+        width: 100%; /* Full width on small screens */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    }
+
+    .card-header {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .search-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .search-input {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .btn-copy {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+}
+
+/* Laptop and desktop adjustments */
+@media (min-width: 769px) {
+    .container-fluid {
+        padding: 0 20px;
+    }
+
+    .search-bar {
+        max-width: 700px;
+    }
+
+    .card {
+        margin: 20px auto;
+        max-width: 600px; /* Ensuring consistent card width */
+    }
+
+    .card-header {
+        font-size: 1.25rem;
+        padding: 15px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .search-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .search-input {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .btn-copy {
+        font-size: 0.875rem;
+        padding: 5px 10px;
+    }
+}
