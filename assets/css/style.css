@@ -642,6 +642,25 @@ section {
   background: #fff;
   border: 2px solid #1f5297;
 }
+.download-resume {
+  margin: 20px;
+  text-align: center;
+}
+
+.download-resume a {
+  text-decoration: none;
+  color: #d9534f; /* Bootstrap's 'danger' color, change as needed */
+  font-size: 24px;
+}
+
+.download-resume a:hover {
+  color: #c9302c; /* Darker red for hover */
+}
+
+.download-resume i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio
