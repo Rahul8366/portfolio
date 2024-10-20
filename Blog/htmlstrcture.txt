@@ -1,0 +1,15 @@
+Explanation:
+HTML Entities:
+
+Replace < with &lt;
+Replace > with &gt;
+Replace { with &#123;
+Replace } with &#125;
+Replace = with &#61;
+HTML Structure:
+
+The <pre> tag preserves whitespace and formatting, making it ideal for displaying code.
+The <code> tag is used to denote the code block.
+JavaScript Code in HTML:
+
+Ensure that JSX syntax within the HTML is properly escaped so that it doesn’t break the HTML rendering.

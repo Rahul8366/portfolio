@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>My Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/images.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/javascript.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="../assets/img/imresizer-1695233590816.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="../index.html">Rahul Balbatti</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="https://www.linkedin.com/in/rahul8366" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="../index.html" class="nav-link scrollto "><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
+          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="blogDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="bx bx-book"></i> <span>Blog</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="blogDropdown">
+              <!-- <a class="dropdown-item" href="#java">Java</a> -->
+              <a class="dropdown-item" href="./html.html">HTML</a>
+              <a class="dropdown-item active" href="./css.html">CSS</a>
+              <a class="dropdown-item " href="./javascript.html">JavaScript</a>
+              <a class="dropdown-item " href="./redux.html">React</a>
+              <a class="dropdown-item " href="./react.html">Redux</a>
+            </div>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header>
+
+
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Rahul Balbatti</h1>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= card Section ======= -->
+    <div class="header bg-primary text-white text-center py-3">
+      <h1>CSS Fundamentals Blog</h1>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar mb-4">
+      <div class="input-group">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search blog posts...">
+        <div class="input-group-append">
+          <button class="btn btn-primary" onclick="searchPosts()">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards Section-->
+     
+     <!-- Card 1: Selectors -->
+     <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Selectors</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeSelectors')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Selectors allow you to target HTML elements in different ways.
+            </p>
+            <pre id="codeSelectors"><code>/* Element selector */
+               p {
+               color: blue;
+               }
+
+               /* Class selector */
+               .container {
+               padding: 20px;
+               }
+
+               /* ID selector */
+               #header {
+               background-color: lightgray;
+               }
+
+               /* Attribute selector */
+               input[type="text"] {
+               border: 1px solid black;
+               }
+
+               /* Pseudo-class selector */
+               a:hover {
+               color: red;
+               }
+
+               /* Pseudo-element selector */
+               p::first-line {
+               font-weight: bold;
+               }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 2: Box Model -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Box Model</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeBoxModel')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                The Box Model describes the rectangular boxes generated for elements in the document tree.
+            </p>
+            <pre id="codeBoxModel"><code>.box {
+                     width: 200px;
+                     padding: 10px;
+                     border: 5px solid black;
+                     margin: 20px;
+                 }
+                             </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 3: Typography -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Typography</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeTypography')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Typography refers to the style and appearance of text.
+            </p>
+            <pre id="codeTypography"><code>h1 {
+                     font-family: Arial, sans-serif;
+                     font-size: 24px;
+                     font-weight: bold;
+                     line-height: 1.5;
+                     text-align: center;
+                     text-decoration: underline;
+                     text-transform: uppercase;
+                 }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 4: Color -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Color</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeColor')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Color can be specified using names, hex values, RGB, RGBA, HSL, and HSLA.
+            </p>
+            <pre id="codeColor"><code>.text-color {
+                color: #ff0000; /* Hex */
+                background-color: rgb(0, 255, 0); /* RGB */
+            }
+            
+            .absolute-units {
+                width: 100px;
+                height: 2in;
+            }
+            
+            .relative-units {
+                font-size: 2em;
+                margin: 10%;
+            }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 5: Positioning -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Positioning</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codePositioning')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Positioning allows you to control the layout of elements on the page.
+            </p>
+            <pre id="codePositioning"><code>.relative {
+                    position: relative;
+                    top: 10px;
+                    left: 20px;
+                }
+                
+                .absolute {
+                    position: absolute;
+                    top: 50px;
+                    left: 100px;
+                }
+                
+                .fixed {
+                    position: fixed;
+                    bottom: 10px;
+                    right: 10px;
+                }
+                
+                .sticky {
+                    position: sticky;
+                    top: 0;
+                }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 6: Display -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Display</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeDisplay')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Display properties control the rendering of elements.
+            </p>
+            <pre id="codeDisplay"><code>.block {
+                  display: block;
+              }
+              
+              .inline {
+                  display: inline;
+              }
+              
+              .inline-block {
+                  display: inline-block;
+              }
+              
+              .flex {
+                  display: flex;
+              }
+              
+              .grid {
+                  display: grid;
+              }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 7: Flexbox -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Flexbox</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeFlexbox')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Flexbox is a layout model for distributing space along a single axis.
+            </p>
+            <pre id="codeFlexbox"><code>.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item {
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    align-self: flex-start;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 8: Grid Layout -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Grid Layout</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeGridLayout')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Grid layout allows you to create complex layouts with rows and columns.
+            </p>
+            <pre id="codeGridLayout"><code>.grid-container {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    grid-template-rows: auto 1fr;
+                    grid-template-areas:
+                        "header header"
+                        "sidebar content";
+                    gap: 10px;
+                }
+                
+                .header {
+                    grid-area: header;
+                }
+                
+                .sidebar {
+                    grid-area: sidebar;
+                }
+                
+                .content {
+                    grid-area: content;
+                }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 9: Transitions and Animations -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Transitions and Animations</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeTransitions')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Transitions and animations add dynamic effects to elements.
+            </p>
+            <pre id="codeTransitions"><code>.box {
+    transition: background-color 0.5s ease;
+}
+
+.box:hover {
+    background-color: blue;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.animated-box {
+    animation: slidein 3s ease-in-out infinite;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 10: Transforms -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Transforms</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeTransforms')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Transforms allow you to change the appearance of an element using translation, rotation, scaling, and skewing.
+            </p>
+            <pre id="codeTransforms"><code>.transform-box {
+    transform: translate(50px, 100px) rotate(45deg) scale(1.5) skew(10deg, 20deg);
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 11: Responsive Design -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Responsive Design</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeResponsiveDesign')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Responsive design ensures that your website adapts to various screen sizes.
+            </p>
+            <pre id="codeResponsiveDesign"><code>@media (max-width: 600px) {
+                   .responsive {
+                       background-color: lightblue;
+                   }
+               }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 12: CSS Variables -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>CSS Variables</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeCSSVariables')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                CSS Variables allow you to define reusable values in CSS.
+            </p>
+            <pre id="codeCSSVariables"><code>:root {
+                    --main-bg-color: coral;
+                    --main-font-size: 16px;
+                }
+                
+                .variable-box {
+                    background-color: var(--main-bg-color);
+                    font-size: var(--main-font-size);
+                }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 13: Pseudo-classes and Pseudo-elements -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Pseudo-classes and Pseudo-elements</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codePseudoClasses')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Pseudo-classes and pseudo-elements help you apply styles based on the state of elements or specific parts of an element.
+            </p>
+            <pre id="codePseudoClasses"><code>a:visited {
+                   color: purple;
+               }
+               
+               .first-letter::first-letter {
+                   font-size: 200%;
+                   color: red;
+               }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 14: CSS Preprocessors -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>CSS Preprocessors</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codePreprocessors')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                CSS preprocessors add features to CSS such as variables and nested rules.
+            </p>
+            <pre id="codePreprocessors"><code>$primary-color: blue;
+
+                .preprocessor {
+                    color: $primary-color;
+                }
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 15: Best Practices -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Best Practices</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeBestPractices')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Best practices for organizing and optimizing CSS.
+            </p>
+            <pre id="codeBestPractices"><code>/* BEM Methodology */
+            .block {
+                &__element {
+                    &--modifier {
+                        background-color: yellow;
+                    }
+                }
+            }
+            
+            /* Link to a minified CSS file */
+            `&lt;link rel="stylesheet" href="styles.min.css"&gt;`
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- Card 16: CSS Frameworks -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>CSS Frameworks</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeCSSFrameworks')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                CSS frameworks provide pre-written styles and components to speed up development.
+            </p>
+            <pre id="codeCSSFrameworks"><code><!-- Bootstrap Example -->
+               ` &lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"&gt;`
+
+            <div class="container">
+           <div class="row">
+               <div class="col">
+                   Column 1
+               </div>
+               <div class="col">
+                   Column 2
+               </div>
+           </div>
+           </div>
+                   </code></pre>
+               </div>
+           </div>
+
+    <!-- Card 17: CSS-in-JS Libraries -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>CSS-in-JS Libraries</span>
+            <button class="btn btn-info btn-sm" onclick="copyToClipboard('codeCSSinJS')">Copy Code</button>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                CSS-in-JS libraries let you write CSS styles in JavaScript.
+            </p>
+            <pre id="codeCSSinJS"><code>/* Styled-components example in React */
+              import styled from 'styled-components';
+              
+              const Button = styled.button`
+                  background: palevioletred;
+                  color: white;
+                  font-size: 1em;
+                  margin: 1em;
+                  padding: 0.25em 1em;
+                  border: 2px solid palevioletred;
+                  border-radius: 3px;
+              `;
+            </code></pre>
+        </div>
+    </div>
+       
+
+    <!-- Add more cards as needed -->
+
+    <!-- End cards Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <!-- <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div> -->
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="#">Rahul</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/copycode.js"></script>
+
+</body>
+
+</html>

@@ -69,15 +69,15 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+/* Header Styles */
 #header {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 250px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
-  transition: all 0.5s;
   padding: 0 15px;
   background: #040b14;
   overflow-y: auto;
@@ -95,8 +95,7 @@ h6 {
   margin: 0;
   padding: 0;
   font-weight: 600;
-  -moz-text-align-last: center;
-  text-align-last: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
 }
 
@@ -153,10 +152,47 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
+/* Navigation Menu Styles */
+/* Custom styles for dropdown */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  background-color: #040b14; /* Match sidebar background */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.dropdown-item {
+  color: #a8a9b4; /* Match link color */
+  padding: 12px 15px;
+}
+
+.dropdown-item:hover {
+  background-color: #2c2f3f; /* Highlight color on hover */
+  color: #101010; /* Text color on hover */
+}
+
+/* Ensure dropdown toggle is styled properly */
+.navbar .nav-link.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  font-size: 12px; /* Adjust the arrow size if necessary */
+}
+
+/* Optional: Adjust padding and spacing for dropdown toggle */
+.nav-link.dropdown-toggle {
+  padding-right: 0.5em;
+}
+
 .nav-menu {
   padding: 30px 0 0 0;
 }
@@ -205,7 +241,7 @@ h6 {
   color: #149ddd;
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation Styles */
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
@@ -241,74 +277,112 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/full-stack-web-developer.jpg") top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../img/webdevloper.jpg") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2; /* Ensure hero section is on top */
 }
 
-#hero:before {
+#hero::before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
   position: absolute;
-  bottom: 0;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  z-index: 1; /* Overlay should be below text */
 }
 
-#hero .hero-container {
+.hero-container {
   position: relative;
   z-index: 2;
-  min-width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #ffffff; /* Text color */
+  padding: 0 20px; /* Add some padding for smaller screens */
 }
 
-#hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 64px;
+.hero-container h1 {
+  font-size: 72px;
   font-weight: 700;
-  line-height: 56px;
-  color: skyblue;
+  margin: 0;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-out;
 }
 
-#hero p {
-  color: skyblue;
-  margin-bottom: 50px;
-  font-size: 26px;
-  font-family: "Poppins", sans-serif;
+.hero-container p {
+  font-size: 24px;
+  margin: 20px 0;
+  animation: fadeInUp 1.5s ease-out;
 }
 
-#hero p span {
-  color: rgb(220, 33, 33);
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+.hero-container p span {
+  color: #00bcd4; /* Accent color */
+  font-weight: 700;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 5px;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Responsive design adjustments */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+  #hero {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 50px 20px;
+    background-attachment: scroll; /* Background scrolls with content on smaller screens */
   }
 
-  #hero h2 {
+  .hero-container h1 {
+    font-size: 36px;
+  }
+
+  .hero-container p {
     font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
   }
 }
+
+/* Ensure sidebar doesn’t overlap hero section */
+@media (min-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow due to large hero section */
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Adjust as needed */
+    height: 100vh;
+    background-color: #333; /* Sidebar background */
+    z-index: 1; /* Sidebar should be below hero section */
+  }
+
+  #content {
+    margin-left: 250px; /* Ensure content starts after the sidebar */
+    padding: 20px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+/* General section styling */
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -320,6 +394,7 @@ section {
 
 .section-title {
   padding-bottom: 30px;
+  position: relative; /* Ensure positioning context for the pseudo-element */
 }
 
 .section-title h2 {
@@ -331,15 +406,22 @@ section {
   color: #173b6c;
 }
 
+/* Initial line styling */
 .section-title h2::after {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 0; /* Start with no visible width */
   height: 3px;
   background: #149ddd;
   bottom: 0;
   left: 0;
+  transition: width 0.4s ease; /* Smooth transition for width */
+}
+
+/* Hover effect */
+.section-title:hover h2::after {
+  width: 95px; /* Expand the line width on hover */
 }
 
 .section-title p {
@@ -380,6 +462,37 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+/* Container for image effect */
+.image-container {
+  position: relative;
+  overflow: hidden; /* Ensure effects are contained within the container */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  height: 300px; /* Fixed height */
+  width: 300px; /* Fixed width */
+}
+
+/* Image styling */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 15px; /* Match border radius of container */
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Hover effect */
+.image-container:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+.image-container:hover img {
+  transform: scale(1.05); /* Ensure image zooms with the container */
+}
+
+
 
 /*--------------------------------------------------------------
 # Facts
@@ -529,6 +642,25 @@ section {
   background: #fff;
   border: 2px solid #1f5297;
 }
+.download-resume {
+  margin: 20px;
+  text-align: center;
+}
+
+.download-resume a {
+  text-decoration: none;
+  color: #d9534f; /* Bootstrap's 'danger' color, change as needed */
+  font-size: 24px;
+}
+
+.download-resume a:hover {
+  color: #c9302c; /* Darker red for hover */
+}
+
+.download-resume i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1073,7 +1205,6 @@ section {
     display: inline-block;
   }
 }
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1081,21 +1212,21 @@ section {
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
-  position: fixed;
-  left: 0;
+  position: inherit;
   bottom: 0;
-  width: 300px;
+  left: 0;
+  width: 100%; /* Make sure footer spans the full width */
   z-index: 9999;
   background: #040b14;
+  text-align: center; /* Center the text inside footer */
 }
 
 #footer .copyright {
-  text-align: center;
+  margin: 0;
 }
 
 #footer .credits {
   padding-top: 5px;
-  text-align: center;
   font-size: 13px;
   color: #eaebf0;
 }
@@ -1104,7 +1235,6 @@ section {
   #footer {
     position: static;
     width: auto;
-    padding-right: 20px 15px;
+    padding: 15px;
   }
 }
-
